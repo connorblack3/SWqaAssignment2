@@ -2,8 +2,8 @@ import math
 
 
 def convertHeight(feet, inches):
-    height = 12 * feet + inches
-    int(height)
+    height = 12 * float(feet) + float(inches)
+    #int(height)
     if int(height) < 0:
         return "out of bounds"
 
@@ -14,12 +14,12 @@ def truncate(f, n):
     return math.floor(f * 10 ** n) / 10 ** n
 
 def calcBMI (height, weight):
-    weight = float(weight) * 0.45
-    height = float(height) * 0.025
+    Newweight = float(weight) * 0.45
+    Newheight = int(height) * 0.025
 
-    height = height*height
+    Newheight = pow(Newheight, 2)
 
-    BMI = weight / height
+    BMI = Newweight // Newheight
     BMI = truncate(BMI,1)
 
     return BMI
