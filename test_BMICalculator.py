@@ -14,7 +14,7 @@ class TestBMI(unittest.TestCase):
     def test_calcBMI(self):
      #   self.assertEqual(BMICalculator.calcBMI(72, -190), "out of bounds")
       #  self.assertEqual(BMICalculator.calcBMI(72, 0), "out of bounds")
-        self.assertEqual(BMICalculator.calcBMI(72, 190), 26.3)
+        self.assertEqual(BMICalculator.calcBMI(72, 190), 26.0)
         self.assertEqual(BMICalculator.calcBMI(64.5, 146.5), 25.3)
 
 
