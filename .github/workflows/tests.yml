@@ -45,7 +45,7 @@ jobs:
         pytest --cov --cov-report html:cov_html
         
     - name: Publish Coverage
-      uses: actions/download-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
-          name: test-coverage
-          path: cov_html
+        name: coverage_report
+        path: cov_html/
