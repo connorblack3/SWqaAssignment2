@@ -39,6 +39,7 @@ jobs:
         pip install coveralls
         coverage run --source=my_package setup.py test
         COVERALLS_REPO_TOKEN=Z6mCEuHtLDquvpI8vVzeX93UATsSFhlEJ coveralls
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
       run: |
         pytest
