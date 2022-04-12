@@ -42,4 +42,10 @@ jobs:
 
     - name: Run Test 
       run:  | 
-        pytest --cov-report html
+        pytest --cov --cov-report html:cov_html
+        
+    - name: Publish Coverage
+      uses: actions/download-artifact@v2
+      with:
+          name: test-coverage
+          path: cov_html
