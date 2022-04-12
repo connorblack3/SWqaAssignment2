@@ -16,7 +16,7 @@ def truncate(number, digits) -> float:
 
 def calcBMI (height, weight):
     Newweight = float(weight) * 0.45
-    Newheight = int(height) * 0.025
+    Newheight = float(height) * 0.025
 
     Newheight = pow(Newheight, 2)
 
