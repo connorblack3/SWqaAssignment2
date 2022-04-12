@@ -1,3 +1,3 @@
 # SWqaAssignment2
 
-![tests](https://github/workflows/tests.yml/badge.svg)
+![tests](https://github.com/connorblack3/SWqaAssignment2/blob/main/.github/workflows/tests.yml.svg)
