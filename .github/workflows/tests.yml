@@ -42,4 +42,4 @@ jobs:
 
     - name: Run Test 
       run:  | 
-        pytest --cov=myproj
+        pytest --cov
