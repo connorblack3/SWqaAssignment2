@@ -21,7 +21,7 @@ def calcBMI (height, weight):
     Newheight = pow(Newheight, 2)
 
     BMI = Newweight // Newheight
-    BMI = truncate(BMI,1)
+    BMI = truncate(BMI,2)
 
     return BMI
 
