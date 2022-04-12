@@ -10,8 +10,9 @@ def convertHeight(feet, inches):
     return height
 
 
-def truncate(f, n):
-    return math.floor(f * 10 ** n) / 10 ** n
+def truncate(number, digits) -> float:
+    stepper = 10.0 ** digits
+    return math.trunc(stepper * number) / stepper
 
 def calcBMI (height, weight):
     Newweight = float(weight) * 0.45
