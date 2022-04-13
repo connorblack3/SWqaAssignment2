@@ -1,10 +1,11 @@
 import math
 from flask import Flask
+from markupsafe import escape
 
 
 app = Flask(__name__)
 
-@app.route("/BMI")
+@app.route("/bmi/<fliat:feet>,<float:inches>,<float:weight>")
 def BMI (feet, inches, weight):
     
     height = 12 * float(feet) + float(inches)
