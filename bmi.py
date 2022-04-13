@@ -3,6 +3,11 @@ from flask import Flask
 from markupsafe import escape
 
 
+def truncate(number, digits) -> float:
+    stepper = 10.0 ** digits
+    return math.trunc(stepper * number) / stepper
+
+
 app = Flask(__name__)
 
 @app.route("/bmi/<fliat:feet>,<float:inches>,<float:weight>")
