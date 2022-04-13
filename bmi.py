@@ -8,7 +8,7 @@ def truncate(number, digits) -> float:
     return math.trunc(stepper * number) / stepper
 
 
-app = Flask(bmi)
+app = Flask(__name__)
 
 @app.route("/bmi/<fliat:feet>,<float:inches>,<float:weight>")
 def BMI (feet, inches, weight):
