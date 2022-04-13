@@ -5,16 +5,19 @@ from BMICalculator import BMI
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET"])
+@app.route('/bmi', methods=['GET'])
 def hello_world():
 
 
-    feet = request.values.get('feet', default="1", type = float)
+    args = request.args
+    print (args)
+    feet = args.get('feet', default="1", type = float)
     print(feet)
-    inch = request.values.get('inch', default = "1", type = float)
+    inch = args.get('inch', default = "1", type = float)
     print(inch)
-    weight = request.values.get('weight', default = "200", type = float)
+    weight = args.get('weight', default = "200", type = float)
     print(weight)
 
     return_value = BMI(feet, inch, weight)
+    print(return_value)
     return return_value
